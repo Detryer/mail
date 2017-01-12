@@ -1,0 +1,37 @@
+.folders {
+	width: 18%;
+	padding: 0 1% 50px;
+	background: white;
+}
+
+.folder {
+	font-family: "Roboto", sans-serif;
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	text-align: left;
+	font-size: 1.2em;
+	border-bottom: 1px solid #ebebeb;
+	padding: 0 10%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: rgb(50, 50, 50);
+}
+
+.folder:first-of-type {
+	border-top: 1px solid #ebebeb;
+}
+
+.folder:hover {
+	background: rgba(50, 50, 50, .1);
+}
+
+.new_folder {
+	margin-top: 50px;
+	text-align: center;
+	border: 1px solid rgba(0, 162, 232, 1);
+}

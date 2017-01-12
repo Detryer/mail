@@ -1,0 +1,26 @@
+{% extends "main_view.html" %}
+{% block content %}
+<div class="mail_top_row">
+	<div class="mail_actions">
+		<div class="mail_new" onclick="topic.write();">Написать</div>
+		<div class="all_read">Отметить все прочитанными</div>
+	</div>
+	<div class="topic_middle">
+		<input type="search" class="topic_search" placeholder="Поиск по сообщениям">
+		<div class="user">
+			<!--<a href="/user/{{userID}}" title="Личный кабинет" class="user_avatar">-->
+			<!--<img src="../../images/topic/avatar.jpg" title="{{user}}" alt="{{user}}">-->
+			<!--</div>-->
+			<a href="javascript:void(0)" title="Будет доступно позднее" class="user_avatar">
+				<img src="../../images/topic/avatar.jpg" alt="Будет доступно позднее..." title="Будет доступно позднее...">
+			</a>
+		</div>
+	</div>
+</div>
+<div id="modal">
+	<div class="dialog-container"></div>
+</div>
+{% include 'folders_view.html' %}
+{% block mail %}
+{% endblock %}
+{% endblock %}

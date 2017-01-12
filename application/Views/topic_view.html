@@ -1,0 +1,52 @@
+{% extends "mail_view.html" %}
+{% block mail %}
+<link rel="stylesheet" href="../../css/topic.css?v={{VERSION}}">
+<div class="topics_list">
+	{% if topics is empty %}
+	<div class="no_topics">Нет сообщений</div>
+	{% endif %}
+	{% for topic in topics %}
+	<div class="topic_block" id="topic_{{topic.id}}">
+		<div class="data">
+			<div class="topic_head">
+				<img src="../../images/topic/avatar.jpg" alt="{{topic.fio}}" title="{{topic.fio}}" class="topic_avatar">
+				<div class="topic_main">
+					<div class="topic_row">
+						<div class="name">
+							<!--<a href="/topic/view/{{topic.id}}" class="topic_title">{{topic.title}}</a>-->
+							<input type='text' class='topic_title' value='{{topic.title}}' onblur='topic.saveTitle({{topic.id}}, "{{topic.title}}")' onclick="topic.open({{topic.id}}, this)" disabled>
+							{% if (topic.user_id == USER_ID or USER_GROUP == 1) %}
+							<img src="../../images/topic/pencil.png" alt="Редактировать" title="Редактировать" class="edit_topic_name" onclick="topic.editTitle({{topic.id}}, this)">
+							{% endif %}
+						</div>
+						<div class="actions">
+							{% if (topic.user_id == USER_ID or USER_GROUP == 1) %}
+							<img src="../../images/topic/delete.png" alt="Удалить" title="Удалить" onclick="topic.delete({{topic.id}})">
+							{% endif %}
+							<img src="../../images/topic/trash.png" alt="В корзину" title="В корзину">
+							<img src="../../images/topic/folder.png" alt="Переместить в папку" title="Переместить в папку">
+							<img src="../../images/topic/users.png" alt="Пользователи в теме" title="Пользователи в теме">
+						</div>
+					</div>
+					<div class="topic_row">
+						<div class="author">{{topic.fio}}</div>
+						<div class="date_add">{{topic.date|date("d.m.Y H:i")}}</div>
+					</div>
+					<div class="topic_row">
+						<div class="messages">Сообщений:</div>
+						<div class="messages_count">{{topic.messages_count}}</div>
+						<div class="last_message">{{topic.date_edit|date("d.m.Y H:i")}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="text_box">
+				<div class="text">{{topic.text|raw}}</div>
+				<a href="#topic_{{topic.id}}" class="topic_full {{topic.text_size}}">
+					Развернуть
+				</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

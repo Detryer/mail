@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="../../css/folders.css?v={{VERSION}}">
+<div class="folders">
+    <a href="?folder=all" class="folder">Все <div class="topics_count">{{topics_count.all}}</div></a>
+    <a href="?folder=new" class="folder">Новые <div class="topics_count">{{topics_count.new}}</div></a>
+    <a href="?folder=my" class="folder">Мои письма <div class="topics_count">{{topics_count.my}}</div></a>
+    <a href="?folder=read" class="folder">Прочитанные <div class="topics_count">{{topics_count.read}}</div></a>
+    <a href="?folder=noanswer" class="folder">Без ответа <div class="topics_count">{{topics_count.no_answer}}</div></a>
+    <a href="?folder=reminders" class="folder">Напоминания <div class="topics_count"></div></a>
+    <a href="?folder=notice" class="folder">Уведомления <div class="topics_count"></div></a>
+    <a href="?folder=draft" class="folder">Черновики <div class="topics_count"></div></a>
+    <a href="?folder=trash" class="folder">Корзина <div class="topics_count"></div></a>
+    {% for folder in folders %}
+    <a href="?folder={{folder.id}}" class="folder">{{folder.name}} <div class="topics_count">{{topics_count[folder.id]}}</div></a>
+    {% endfor %}
+    <a href="javascript:void(0);" class="folder new_folder">Новая папка</a>
+</div>

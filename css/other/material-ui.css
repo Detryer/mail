@@ -1,0 +1,109 @@
+.material-ui {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	border: 0;
+	border-radius: 2px;
+	transition: box-shadow .5s ease;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.material-ui .ui-dialog-titlebar {
+	background: transparent;
+	border: 0;
+
+	margin: 0px;
+	padding: 24px 24px 20px;
+	color: rgba(0, 0, 0, 0.870588);
+	font-size: 22px;
+	line-height: 32px;
+	font-weight: 400;
+	border-bottom: none;
+}
+.material-ui .ui-dialog-title {
+	float: none;
+	*margin: 0;
+	*line-height: 18px;
+}
+.material-ui .ui-dialog-titlebar-close:hover,
+.material-ui .ui-dialog-titlebar-close:focus {
+	padding: inherit;
+}
+.material-ui .ui-state-hover {
+	background: none;
+	border: 0;
+}
+.material-ui .ui-dialog-titlebar-close {
+	position: absolute;
+	right: 0; top: 0;
+	width: 18px;
+	height: 18px;
+	padding: 14px;
+	margin: 0;
+}
+.material-ui .ui-dialog-content {
+	*padding: 14px;
+	*padding-top: 10px;
+
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.6);
+	padding: 0px 24px 24px;
+	box-sizing: border-box;
+	overflow-y: hidden;
+	max-height: 694px;	
+}
+
+.material-ui .ui-dialog-buttonpane {
+	text-align: left;
+	border: 0;
+	background-image: none;
+	margin: 0;
+	padding: 8px;
+}
+
+.confirm-ui .ui-dialog-titlebar-close {
+	display: none;
+}
+
+.material-ui .ui-dialog-buttonpane button {
+	background: transparent;
+	border: 10px;
+	outline: none;
+	margin: 0;
+	height: 36px;
+	line-height: 36px;
+	min-width: 88px;
+	*color: #00A2E8;
+	transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0);
+	text-align: center;
+}
+.material-ui .ui-dialog-buttonpane button:hover {
+	background: rgba(0,0,0,0.08);
+}
+
+.material-ui .ui-button-text {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	position: relative;
+	padding-left: 16px;
+	padding-right: 16px;
+	vertical-align: middle;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.material-ui .attention-block {
+	font-weight: 500;
+	color: #F44336;
+}
+.material-ui .primary-button {
+	color: #00A2E8;
+}
+
+.material-ui .description-block + .attention-block {
+	margin-top: 8px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Почта</title>
+	{% include '/additional/css_files.html' %}
+</head>
+<body>
+<div class="base_top">
+	{% include '/headers/'~base~'_header.html' %}
+</div>
+<div class="mail_bases">
+	{% include 'bases_list_view.html' %}
+</div>
+<div class="main_content">
+	<div class="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+{% include '/additional/js_files.html' %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends "mail_view.html" %}
+{% block mail %}
+<link rel="stylesheet" href="../../css/post.css?v={{VERSION}}">
+<div class="post_list">
+	<div class="topic_top">
+		<div class="topic_users">
+			Пользователи в теме
+			<img src="../../images/topic/users.png" class="topic_img" alt="Пользователи в теме"
+			     title="Пользователи в теме">
+		</div>
+		<div class="topic_title">{{ topic_title }}</div>
+	</div>
+	{% for post in posts %}
+	<div class="post_block" id="post_{{post.id}}">
+		<div class="post_head">
+			<div class="head_main">
+				<img src="../../images/topic/avatar.jpg" alt="{{post.fio}}" title="{{post.fio}}" class="post_avatar">
+				<div class="post_info">
+					<div class="post_author">{{post.fio}}</div>
+					<div class="post_date_add">{{post.date|date("d.m.Y H:i")}}</div>
+				</div>
+			</div>
+			<div class="post_actions">
+				{% if loop.first == false %}
+				<img src="../../images/topic/delete.png" alt="Удалить" title="Удалить"
+				     onclick="topic.delete({{post.id}})">
+				{% endif %}
+				<img src="../../images/topic/edit.png" alt="Редактировать" title="Редактировать"
+				     onclick="topic.editPost({post.id}},{{topic_id}})">
+			</div>
+		</div>
+		<div class="text_box">
+			<div class="text">{{post.text|raw}}</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+.post_list {
+	font-family: "Roboto", sans-serif;
+	width: 60%;
+	float: left;
+}
+
+.topic_top {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 1.5em;
+	background: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 5;
+}
+
+.topic_title {
+	width: 83%;
+}
+
+.topic_users {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	position: absolute;
+	left: 0;
+	width: 17%;
+	height: 30px;
+	line-height: 30px;
+	margin: 15px 0;
+	cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, .4);
+	color: rgba(0, 0, 0, .6);
+	font-size: 14px;
+	padding: 0 10px;
+}
+
+.topic_users:hover {
+	background: rgba(0, 0, 0, .1);
+}
+
+.topic_img {
+	height: 30px;
+	width: 30px;
+	margin-left: 20px;
+}
+
+.post_block {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	clear: both;
+	margin-bottom: 20px;
+	background: white;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.post_head {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0, 0, 0, .2);
+	color: rgba(0, 0, 0, .6);
+}
+
+.head_main {
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.post_info {
+	height: 40px;
+	display: inline-flex;
+	flex-direction: column;
+	padding-left: 20px;
+}
+
+.post_author, .post_date_add {
+	width: 100%;
+	line-height: 20px;
+	height: 20px;
+}
+
+.post_date_add {
+	font-size: 0.8em;
+}
+
+.post_actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 30%;
+	padding-right: 2%;
+}
+
+.post_actions > img {
+	height: 20px;
+	padding: 10px 5px;
+}
+
+.post_avatar {
+	height: 40px;
+}
+
+.text_box {
+	padding: 10px;
+	line-height: 25px;
+}
